@@ -1,0 +1,9 @@
+ //serve para padronizar os caminhos independente do S.O usado
+const { resolve } = require('path');
+
+module.exports = {
+    config: resolve(__dirname, 'src', 'config', 'database.js'), //informa o caminho de conf do database
+    'models-path': resolve(__dirname, 'src', 'app', 'models'), //informa o path de models
+    'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'), //informa o path de migrations
+    'seeders-path': resolve(__dirname, 'src', 'database', 'seeds') //informa o path de seeds
+};
